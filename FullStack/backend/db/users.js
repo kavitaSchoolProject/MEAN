@@ -7,4 +7,7 @@ const userSchema = new Schema({
     isAdmin:Boolean
 })
 
-module.exports = mongoose.model('User', userSchema);
+const User= mongoose.model('users', userSchema);
+
+module.exports =User;
+

@@ -1,0 +1,21 @@
+<div class="main">
+  @if(Isedit){
+    <h3>Update Category</h3>
+}
+@else {
+  <h3>Add New Category</h3>
+}
+ 
+<form action="" class="formElement">
+  <label for="name">Category Name</label><br>
+  <input type="text" name="name" id="name" placeholder="Category Name" [(ngModel)]="name">
+  <br>
+  @if(Isedit){
+    <button (click)="updateCategories()" [disabled]="!name">Update</button>
+}
+@else {
+  <button (click)="addCategories()" [disabled]="!name" >Add</button>
+}
+ 
+</form>
+</div>
